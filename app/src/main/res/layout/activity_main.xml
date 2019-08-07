@@ -1,18 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0b243b"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PLAYING FROM ARTIST"
+            android:id="@+id/main_title"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#848484"/>
+    <TextView
+            android:text="Dj Dinozao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FAFAFA"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:layout_below="@+id/main_title"
+            android:id="@+id/artist"/>
+    <ImageView
+            android:layout_width="320dp"
+            android:layout_height="360dp"
+            app:srcCompat="@drawable/butao"
+            android:id="@+id/img_music"
+            android:layout_below="@id/artist"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_music"
+            android:layout_marginStart="38dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:layout_marginEnd="38dp"
+            android:id="@+id/container1"
+    >
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="#FAFAFA"
+                  android:text="Coraline - End Credits (Dj Dinozão Remix)"
+                  android:textStyle="bold"
+                  android:textSize="18sp"
+                  android:layout_marginStart="8dp"
+                  android:layout_marginLeft="8dp"
+                  android:id="@+id/song"
+        />
+
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:src="@drawable/arrow2"
+        />
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Dj Dinozão"
+                  android:id="@+id/artist_name_minor"
+                  android:textColor="#848484"
+                  android:layout_below="@id/song"
+                  android:layout_marginLeft="8dp"
+
+        />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
